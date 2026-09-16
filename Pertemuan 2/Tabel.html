@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Tabel</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+      }
+
+      h3 {
+        margin-bottom: 15px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: "Times New Roman", serif;
+      }
+
+      th {
+        background-color: #401ee7;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid white;
+      }
+
+      td {
+        border: 1px solid #aaa;
+        padding: 9px;
+      }
+
+      .hari {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .jam {
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .footer {
+        background-color: #401ee7;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>TUGAS PEMBUATAN TABEL MENGGUNAKAN HTML & CSS</h3>
+
+    <table>
+      <!-- HEADER -->
+      <tr>
+        <th>HARI</th>
+        <th>JAM</th>
+        <th>MATA KULIAH</th>
+        <th>DOSEN</th>
+        <th>RUANG</th>
+      </tr>
+
+      <!-- SENIN -->
+      <tr>
+        <td rowspan="2" class="hari">SENIN</td>
+        <td class="jam">08.00 - 10.00</td>
+        <td>Kajian Islam</td>
+        <td>Ust. Anwar Nashidin, Lc.</td>
+        <td rowspan="2">Ruang Teori</td>
+      </tr>
+
+      <tr>
+        <td class="jam">10.00 - 12.00</td>
+        <td>Aplikasi Perkantoran</td>
+        <td>Drs. MGS Hendri, M.M</td>
+      </tr>
+
+      <!-- SELASA -->
+      <tr>
+        <td rowspan="2" class="hari">SELASA</td>
+        <td class="jam">08.00 - 10.00</td>
+        <td>Linux Fundamental</td>
+        <td>Henry Saptono, S.Si,M.kom</td>
+        <td rowspan="4">Ruang I</td>
+      </tr>
+
+      <tr>
+        <td class="jam">10.00 - 12.00</td>
+        <td>Html, Css & Javascript</td>
+        <td></td>
+      </tr>
+
+      <!-- RABU -->
+      <tr>
+        <td rowspan="2" class="hari">RABU</td>
+        <td class="jam">08.00 - 10.00</td>
+        <td>Basis Data</td>
+        <td rowspan="2">Sirojul Munir, S.Si, M.Kom</td>
+      </tr>
+
+      <tr>
+        <td class="jam">10.00 - 12.00</td>
+        <td>Algoritma dan Pemograman</td>
+      </tr>
+
+      <!-- KAMIS -->
+      <tr>
+        <td rowspan="2" class="hari">KAMIS</td>
+        <td class="jam">08.00 - 10.00</td>
+        <td>Kewirausahaan & Pengembangan Diri</td>
+        <td>Khoirul Umam, S.Pd</td>
+        <td rowspan="2">Ruang Teori</td>
+      </tr>
+
+      <tr>
+        <td class="jam">10.00 - 12.00</td>
+        <td>Bahasa Inggris</td>
+        <td>Drs. Mahfudz</td>
+      </tr>
+
+      <!-- FOOTER -->
+      <tr>
+        <td colspan="5" class="footer">JADWAL DAPAT BERUBAH SEWAKTU-WAKTU</td>
+      </tr>
+    </table>
+    <!-- DATA MAHASISWA -->
+    <div class="data-mahasiswa">
+      <p>Nama: Muhamad Aditia</p>
+
+      <p>NIM: 0110224213</p>
+
+      <p>Kelas: TI-02</p>
+
+      <p>Kampus: STT Nurul Fikri</p>
+    </div>
+  </body>
+</html>

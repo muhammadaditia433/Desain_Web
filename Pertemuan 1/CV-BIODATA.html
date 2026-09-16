@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CV - Muhamad Aditia</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #e9eef5;
+        color: #1e293b;
+        line-height: 1.6;
+    }
+
+    /* =========================
+       CONTAINER
+    ========================== */
+
+    .cv {
+        width: 100%;
+        max-width: 1100px;
+        margin: 40px auto;
+        background: white;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        min-height: 1000px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        border-radius: 18px;
+        overflow: hidden;
+    }
+
+    /* =========================
+       SIDEBAR
+    ========================== */
+
+    .sidebar {
+        background: linear-gradient(
+            160deg,
+            #0b346a,
+            #071f40
+        );
+
+        color: white;
+        padding: 40px 30px;
+    }
+
+    .profile {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .profile img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid rgba(255,255,255,0.9);
+        margin-bottom: 20px;
+    }
+
+    .profile h1 {
+        font-size: 27px;
+        margin-bottom: 5px;
+    }
+
+    .profile p {
+        color: #cbdcf5;
+        font-size: 14px;
+    }
+
+    .side-section {
+        margin-top: 30px;
+    }
+
+    .side-title {
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .contact-item {
+        margin-bottom: 13px;
+        font-size: 14px;
+        color: #dbeafe;
+    }
+
+    .contact-item strong {
+        display: block;
+        color: white;
+        margin-bottom: 2px;
+    }
+
+    /* =========================
+       SKILL
+    ========================== */
+
+    .skill {
+        margin-bottom: 15px;
+    }
+
+    .skill-name {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .skill-bar {
+        height: 6px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .skill-progress {
+        height: 100%;
+        background: white;
+        border-radius: 10px;
+    }
+
+    /* =========================
+       MAIN CONTENT
+    ========================== */
+
+    .main {
+        padding: 50px 55px;
+    }
+
+    .section {
+        margin-bottom: 42px;
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .section-number {
+        width: 35px;
+        height: 35px;
+        background: #0b346a;
+        color: white;
+        border-radius: 9px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .section-title h2 {
+        color: #0b346a;
+        font-size: 25px;
+    }
+
+    .section-content {
+        color: #475569;
+        font-size: 15px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+        background: #f8fafc;
+        border-left: 4px solid #0b346a;
+        padding: 20px 22px;
+        border-radius: 0 10px 10px 0;
+    }
+
+    /* =========================
+       EDUCATION
+    ========================== */
+
+    .education {
+        border-left: 2px solid #cbd5e1;
+        padding-left: 25px;
+    }
+
+    .education-item {
+        position: relative;
+        margin-bottom: 25px;
+    }
+
+    .education-item::before {
+        content: "";
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        background: #0b346a;
+        border-radius: 50%;
+        left: -32px;
+        top: 7px;
+    }
+
+    .education-year {
+        color: #0b346a;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .education-item h3 {
+        font-size: 18px;
+        margin: 4px 0;
+    }
+
+    .education-item p {
+        color: #64748b;
+        font-size: 14px;
+    }
+
+    /* =========================
+       PROJECT
+    ========================== */
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .project {
+        border: 1px solid #e2e8f0;
+        padding: 20px;
+        border-radius: 12px;
+        transition: 0.3s;
+    }
+
+    .project:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .project h3 {
+        color: #0b346a;
+        margin-bottom: 8px;
+        font-size: 17px;
+    }
+
+    .project p {
+        font-size: 13px;
+        color: #64748b;
+    }
+
+    /* =========================
+       INTEREST
+    ========================== */
+
+    .interests {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .interest {
+        padding: 8px 15px;
+        background: #e8f0fb;
+        color: #0b346a;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    .footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #e2e8f0;
+        text-align: center;
+        font-size: 13px;
+        color: #94a3b8;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 800px) {
+
+        .cv {
+            grid-template-columns: 1fr;
+            margin: 15px;
+        }
+
+        .sidebar {
+            padding: 35px 25px;
+        }
+
+        .main {
+            padding: 35px 25px;
+        }
+
+        .projects {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="cv">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="profile">
+
+            <img
+                src="itn.jpeg"
+                alt="Foto Muhamad Aditia"
+            >
+
+            <h1>Muhamad Aditia</h1>
+
+            <p>
+                Mahasiswa Teknik Informatika
+            </p>
+
+        </div>
+
+
+        <!-- KONTAK -->
+
+        <div class="side-section">
+
+            <div class="side-title">
+                Kontak
+            </div>
+
+            <div class="contact-item">
+                <strong>Email</strong>
+                mahasiswa@example.com
+            </div>
+
+            <div class="contact-item">
+                <strong>Telepon</strong>
+                08xxxxxxxxxx
+            </div>
+
+            <div class="contact-item">
+                <strong>Alamat</strong>
+                Indonesia
+            </div>
+
+        </div>
+
+
+        <!-- BIODATA -->
+
+        <div class="side-section">
+
+            <div class="side-title">
+                Biodata
+            </div>
+
+            <div class="contact-item">
+                <strong>NIM</strong>
+                0110224213
+            </div>
+
+            <div class="contact-item">
+                <strong>Program Studi</strong>
+                Teknik Informatika
+            </div>
+
+            <div class="contact-item">
+                <strong>Rombel</strong>
+                TI02
+            </div>
+
+            <div class="contact-item">
+                <strong>Status</strong>
+                Mahasiswa
+            </div>
+
+        </div>
+
+
+        <!-- SKILL -->
+
+        <div class="side-section">
+
+            <div class="side-title">
+                Keahlian
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="width:90%">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>CSS</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="width:85%">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>JavaScript</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="width:75%">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>Python</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="width:70%">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>MySQL</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="width:75%">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- TENTANG SAYA -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    01
+                </div>
+
+                <h2>Tentang Saya</h2>
+
+            </div>
+
+
+            <div class="section-content about">
+
+                Saya adalah mahasiswa Program Studi Teknik
+                Informatika di STT Terpadu Nurul Fikri yang
+                memiliki ketertarikan pada bidang teknologi
+                informasi dan pengembangan website.
+
+                <br><br>
+
+                Saya senang mempelajari teknologi baru,
+                mengembangkan kemampuan pemrograman, serta
+                membuat berbagai project sebagai sarana untuk
+                meningkatkan pengalaman dan kemampuan di
+                bidang teknologi.
+
+            </div>
+
+        </section>
+
+
+        <!-- PENDIDIKAN -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    02
+                </div>
+
+                <h2>Pendidikan</h2>
+
+            </div>
+
+
+            <div class="education">
+
+                <div class="education-item">
+
+                    <div class="education-year">
+                        2024 - Sekarang
+                    </div>
+
+                    <h3>
+                        STT Terpadu Nurul Fikri
+                    </h3>
+
+                    <p>
+                        Program Studi Teknik Informatika
+                    </p>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <div class="education-year">
+                        Pendidikan Sebelumnya
+                    </div>
+
+                    <h3>
+                        Sekolah Menengah
+                    </h3>
+
+                    <p>
+                        Pendidikan tingkat menengah
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    03
+                </div>
+
+                <h2>Project</h2>
+
+            </div>
+
+
+            <div class="projects">
+
+                <div class="project">
+
+                    <h3>
+                        ☕ Coffee Shop Website
+                    </h3>
+
+                    <p>
+                        Website pemesanan coffee shop
+                        menggunakan HTML, CSS, JavaScript,
+                        Express.js, dan MySQL.
+                    </p>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>
+                        🌱 Pupuk Pintar
+                    </h3>
+
+                    <p>
+                        Aplikasi berbasis web untuk membantu
+                        memberikan informasi dan rekomendasi
+                        terkait kebutuhan pupuk tanaman.
+                    </p>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>
+                        🌧️ Analisis Curah Hujan
+                    </h3>
+
+                    <p>
+                        Project data mining menggunakan metode
+                        K-Means Clustering untuk mengelompokkan
+                        intensitas curah hujan.
+                    </p>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>
+                        🛒 KOPIJAK
+                    </h3>
+
+                    <p>
+                        Website coffee shop dengan fitur
+                        menu, keranjang, pemesanan, pengguna,
+                        dan pengelolaan data.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MINAT -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    04
+                </div>
+
+                <h2>Hobi & Minat</h2>
+
+            </div>
+
+
+            <div class="interests">
+
+                <span class="interest">
+                    Pemrograman
+                </span>
+
+                <span class="interest">
+                    Web Development
+                </span>
+
+                <span class="interest">
+                    Teknologi
+                </span>
+
+                <span class="interest">
+                    Data Mining
+                </span>
+
+                <span class="interest">
+                    Belajar Teknologi Baru
+                </span>
+
+                <span class="interest">
+                    Olahraga
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- TUJUAN -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    05
+                </div>
+
+                <h2>Tujuan</h2>
+
+            </div>
+
+
+            <div class="section-content">
+
+                Memperluas pengetahuan dan pengalaman di
+                bidang teknologi informasi, khususnya dalam
+                pengembangan aplikasi dan website, serta
+                terus meningkatkan kemampuan melalui berbagai
+                project dan pengalaman baru.
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            <p>
+                CV - Muhamad Aditia
+            </p>
+
+            <p>
+                STT Terpadu Nurul Fikri
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+```
+
+</body>
+</html>
