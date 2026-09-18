@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263238;
+    background: #f5fbfa;
+}
+
+a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+
+/* HEADER */
+.header-page {
+    background: #0b3d3a;
+}
+
+.banner {
+    height: 100%;
+    padding: 22px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #0b3d3a, #087f73, #1aa58f);
+    color: white;
+}
+
+.mini-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    opacity: .85;
+}
+
+.banner h1 {
+    margin: 5px 0 4px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.banner p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.profile-badge {
+    color: white;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 14px;
+    padding: 14px 22px;
+    text-align: right;
+    background: rgba(255,255,255,.10);
+}
+
+.profile-badge:hover {
+    color: white;
+    text-decoration: none;
+    background: rgba(255,255,255,.18);
+}
+
+.profile-badge strong,
+.profile-badge small {
+    display: block;
+}
+
+.profile-badge strong {
+    font-size: 16px;
+}
+
+.profile-badge small {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+/* MENU */
+.menu-page {
+    background: #ffffff;
+    border-bottom: 2px solid #cce7e2;
+}
+
+.nav-menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+}
+
+.nav-menu a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #075e54;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.nav-menu a:hover {
+    background: #e2f4f0;
+    text-decoration: none;
+}
+
+/* MAIN */
+.main-card {
+    margin: 28px auto;
+    width: 88%;
+    padding: 28px;
+    background: white;
+    border: 1px solid #d5e7e3;
+    border-radius: 16px;
+    box-shadow: 0 7px 22px rgba(0, 77, 64, .08);
+}
+
+.label {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: #dff4ef;
+    color: #00796b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: .8px;
+}
+
+.main-card h2 {
+    margin: 13px 0 18px;
+    color: #183b38;
+    font-size: 27px;
+}
+
+.profile-info p {
+    margin: 14px 0;
+    font-size: 15px;
+}
+
+.profile-info b {
+    color: #00796b;
+}
+
+.note {
+    margin-top: 22px;
+    padding: 15px 17px;
+    border-left: 4px solid #13a38b;
+    background: #f1f8f7;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.subtext {
+    font-size: 14px;
+    color: #607d7a;
+}
+
+/* SIDE PANELS */
+.side-panel {
+    height: 100%;
+    padding: 20px 14px;
+    background: #f9fdfc;
+    border-right: 1px solid #cde1dd;
+}
+
+body:last-child .side-panel {
+    border-right: 0;
+}
+
+fieldset {
+    border: 1px solid #b8d8d2;
+    border-radius: 12px;
+    padding: 18px 20px;
+    background: white;
+}
+
+legend {
+    padding: 0 9px;
+    color: #00796b;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.link-list {
+    margin: 3px 0 0;
+    padding-left: 22px;
+}
+
+.link-list li {
+    padding: 7px 0;
+    font-size: 14px;
+}
+
+.link-list a {
+    font-weight: 600;
+}
+
+.numbered {
+    padding-left: 28px;
+}
+
+/* TABLE */
+.study-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.study-table th,
+.study-table td {
+    border: 1px solid #cfe2de;
+    padding: 10px 8px;
+    text-align: center;
+}
+
+.study-table th {
+    background: #0d7d70;
+    color: white;
+}
+
+.study-table tr:nth-child(even) {
+    background: #f1f8f7;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery a {
+    display: block;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #d3e8e3;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.025);
+    box-shadow: 0 6px 15px rgba(0, 77, 64, .18);
+}
+
+/* FOOTER */
+.footer-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #173f3b;
+    color: white;
+    font-size: 12px;
+}
+
+.footer-page p {
+    margin: 0;
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300">
+<rect width="500" height="300" fill="#1d4ed8"/>
+<rect x="40" y="55" width="420" height="190" rx="15" fill="#dbeafe"/>
+<text x="250" y="145" text-anchor="middle" font-family="Arial" font-size="34" font-weight="bold" fill="#1e3a8a">STT NURUL FIKRI</text>
+<text x="250" y="185" text-anchor="middle" font-family="Arial" font-size="20" fill="#334155">Kampus</text>
+</svg>
